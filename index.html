@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon" />
   <title>Achadinhos de Casa e Utilidades</title>
 
-  <!-- Fonte: Arial + Ícones do Font Awesome -->
+  <!-- Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
   <style>
@@ -18,28 +18,47 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #f8f8f8;
+      background-color: #fdf6f9;
       color: #333;
       line-height: 1.6;
     }
 
+    /* Cabeçalho com gradiente em rosa claro */
     header {
-      background: linear-gradient(135deg, #ff5722, #e64a19);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: linear-gradient(135deg, #f06292, #e91e63);
       color: #fff;
-      padding: 1.8rem 1.5rem;
-      text-align: center;
+      padding: 1.2rem 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
+    .logo_achadinho {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      text-align: center;
+      flex: 1;
+    }
+
     header h1 {
-      font-size: 1.9rem;
+      font-size: 1.6rem;
       margin: 0;
+      font-weight: bold;
     }
 
     header p {
-      font-size: 1.1rem;
-      margin-top: 8px;
-      opacity: 0.95;
+      font-size: 1rem;
+      margin-top: 4px;
+      opacity: 0.9;
     }
 
     main {
@@ -53,6 +72,7 @@
       margin-bottom: 30px;
       color: #555;
       font-size: 1.1rem;
+      padding: 0 15px;
     }
 
     .produtos {
@@ -106,7 +126,7 @@
     }
 
     .galeria img:hover {
-      border-color: #ff5722;
+      border-color: #f06292;
       opacity: 1;
       transform: scale(1.05);
     }
@@ -129,7 +149,7 @@
     .botao-afiliado {
       display: block;
       text-align: center;
-      background-color: #ff5722;
+      background-color: #f06292;
       color: white;
       padding: 12px;
       text-decoration: none;
@@ -141,7 +161,7 @@
     }
 
     .botao-afiliado:hover {
-      background-color: #e64a19;
+      background-color: #e91e63;
     }
 
     /* Botão Flutuante do WhatsApp */
@@ -186,10 +206,11 @@
       }
     }
 
+    /* Rodapé */
     footer {
       text-align: center;
       padding: 25px;
-      background-color: #333;
+      background-color: #f06292;
       color: #fff;
       margin-top: 50px;
       font-size: 0.9rem;
@@ -199,23 +220,41 @@
       margin: 8px 0;
     }
 
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #ffd1e9;
+    }
+
     /* Responsividade */
     @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+        gap: 10px;
+      }
+
+      .logo_achadinho {
+        width: 60px;
+        height: 60px;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
       .produtos {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       }
 
-      header h1 {
-        font-size: 1.6rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
       .intro {
         font-size: 1rem;
-        padding: 0 15px;
       }
 
       .whatsapp-float {
@@ -230,16 +269,19 @@
 </head>
 <body>
 
-  <!-- Cabeçalho -->
+  <!-- Cabeçalho com logo à esquerda -->
   <header>
-    <h1>🛍️ Achadinhos de Casa e Utilidades</h1>
-    <p>Produtos incríveis com os melhores preços da Shopee!</p>
+    <img class="logo_achadinho" src="img/logo_achadinho.png" alt="Logo Achadinhos de Casa e Utilidades">
+    <div class="header-text">
+      <h1>🌸 Achadinhos de Casa e Utilidades</h1>
+      <p>Produtos incríveis com os melhores preços da Shopee!</p>
+    </div>
   </header>
 
   <!-- Introdução -->
   <main>
     <p class="intro">
-      Olá! Sou Achadinhos de Casa e Utilidades, e selecionei os produtos mais legais, práticos e baratos da Shopee para você. 
+      Olá! Sou Roberta, e selecionei os produtos mais legais, práticos e baratos da Shopee para você. 
       Clique, compre e receba em casa com segurança. 💖
     </p>
 
@@ -365,11 +407,11 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Rodapé -->
+  <!-- Rodapé em rosa -->
   <footer>
     <p>© 2025 Loja de Afiliados Shopee - Achadinhos de Casa e Utilidades. Todos os direitos reservados.</p>
     <p>Este site utiliza links afiliados. Ganhamos uma pequena comissão sem custo adicional para você.</p>
-    <p>Contato: <a href="mailto:roberta@lojarobertaviana.com" style="color: #ddd;">roberta.mnicolette@hotmail.com</a></p>
+    <p>Contato: <a href="mailto:roberta.mnicolette@hotmail.com">roberta.mnicolette@hotmail.com</a></p>
   </footer>
 
   <!-- Script para galeria de imagens -->
