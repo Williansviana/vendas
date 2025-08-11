@@ -88,11 +88,30 @@
       overflow: hidden;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
     }
 
     .produto:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Selo Mais Vendido */
+    .mais-vendido {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #e91e63;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      transform: rotate(-90deg) translateX(40px) translateY(40px);
+      transform-origin: top left;
+      white-space: nowrap;
     }
 
     .foto-principal {
@@ -136,6 +155,25 @@
       font-size: 1.1rem;
       color: #222;
       margin: 10px 0 5px;
+    }
+
+    .preco {
+      padding: 0 12px;
+      font-weight: bold;
+      color: #e91e63;
+      margin: 5px 0;
+      font-size: 1.1rem;
+    }
+
+    .preco-de {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .preco-por {
+      color: #e91e63;
+      font-size: 1.1rem;
     }
 
     .produto p {
@@ -264,7 +302,7 @@
   <!-- Introdução -->
   <main>
     <p class="intro">
-      Olá! Sou Achadinhos de Casa e Utilidades, e selecionei os produtos mais legais, práticos e baratos da Shopee para você. 
+      Olá! Sou Roberta, e selecionei os produtos mais legais, práticos e baratos da Shopee para você. 
       Clique, compre e receba em casa com segurança. 💖
     </p>
 
@@ -280,6 +318,10 @@
           <img src="./img/4.webp" alt="Máquina de lavar - Uso em viagem" data-large="./img/4.webp">
         </div>
         <h2>Mini máquina de lavar roupa 6L</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 199,90</span><br>
+          <span class="preco-por">Por: R$ 159,36</span>
+        </div>
         <p>Dobrável, portátil, ideal para viagens ou lavar roupas íntimas com praticidade.</p>
         <a href="https://s.shopee.com.br/7pivY54M2D" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
@@ -293,12 +335,17 @@
           <img src="./img/borboleta4.webp" alt="Bolsa infantil - Detalhe do fecho" data-large="./img/borboleta4.webp">
         </div>
         <h2>Bolsa De Silicone Infantil Criança Borboleta</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 29,90</span><br>
+          <span class="preco-por">Por: R$ 18,99</span>
+        </div>
         <p>Estampa fofa de borboleta, resistente e fácil de limpar. Perfeita para escola ou passeios!</p>
         <a href="https://s.shopee.com.br/10sbV0xOGx" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
 
-      <!-- Produto 3 -->
+      <!-- Produto 3 - Mais Vendido -->
       <article class="produto">
+        <div class="mais-vendido">⭐ MAIS VENDIDO</div>
         <img src="./img/saboneteira.webp" alt="Saboneteira automática sem toque" class="foto-principal" data-main="./img/saboneteira.webp">
         <div class="galeria">
           <img src="./img/saboneteira.webp" alt="Saboneteira - Vista frontal" data-large="./img/saboneteira.webp">
@@ -307,8 +354,12 @@
           <img src="./img/saboneteira4.webp" alt="Saboneteira - Sensor" data-large="./img/saboneteira4.webp">
         </div>
         <h2>Saboneteira Automática Sem Toque</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 39,90</span><br>
+          <span class="preco-por">Por: R$ 23,99</span>
+        </div>
         <p>Sensor infravermelho, recarregável, ideal para banheiro ou cozinha. Higiênica e moderna!</p>
-        <a href="https://s.shopee.com.br/9aBcDeFgHi" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
+        <a href="https://s.shopee.com.br/5pxuqvpIn4" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
 
       <!-- Produto 4 -->
@@ -321,6 +372,10 @@
           <img src="./img/jogoamericano3.webp" alt="Jogo americano - Conjunto fechado" data-large="./img/jogoamericano3.webp">
         </div>
         <h2>Kit 6 Peças Jogo Americano Redondo</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 39,90</span><br>
+          <span class="preco-por">Por: R$ 22,98</span>
+        </div>
         <p>Protege a mesa, decora o ambiente e é fácil de limpar. Ideal para jantar com estilo!</p>
         <a href="https://s.shopee.com.br/8KfCEZBr3Z" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
@@ -333,6 +388,10 @@
           <img src="./img/taca1.webp" alt="Taça - Com bebida" data-large="./img/taca1.webp">
         </div>
         <h2>Jogo 6 Taças Diamante 330ml</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 49,90</span><br>
+          <span class="preco-por">Por: R$ 29,10</span>
+        </div>
         <p>Vidro transparente com detalhes facetados. Perfeito para festas e momentos especiais.</p>
         <a href="https://s.shopee.com.br/7ATEuLkYNH" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
@@ -347,6 +406,10 @@
           <img src="./img/espelho3.webp" alt="Espelho - Detalhe do couro" data-large="./img/espelho3.webp">
         </div>
         <h2>Espelho Redondo de Couro Adnet</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 80,00</span><br>
+          <span class="preco-por">Por: R$ 34,90</span>
+        </div>
         <p>Decoração elegante para sala, quarto ou banheiro. Com alça e suporte incluso.</p>
         <a href="https://s.shopee.com.br/4VSTjTOH4R" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
@@ -360,12 +423,17 @@
           <img src="./img/varal2.webp" alt="Varal - Dobrado" data-large="./img/varal2.webp">
         </div>
         <h2>Varal de Chão 3 Andares Dobrável</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 99,90</span><br>
+          <span class="preco-por">Por: R$ 84,89</span>
+        </div>
         <p>Espaçoso, portátil e resistente. Ideal para apartamentos e lavanderias pequenas.</p>
         <a href="https://s.shopee.com.br/4L93XBXIwe" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
 
-      <!-- Produto 8 -->
+      <!-- Produto 8 - Mais Vendido -->
       <article class="produto">
+        <div class="mais-vendido">⭐ MAIS VENDIDO</div>
         <img src="./img/pano.webp" alt="Kit 10 panos de limpeza em microfibra" class="foto-principal" data-main="./img/pano.webp">
         <div class="galeria">
           <img src="./img/pano.webp" alt="Pano - Vista frontal" data-large="./img/pano.webp">
@@ -374,6 +442,10 @@
           <img src="./img/pano3.webp" alt="Pano - Conjunto" data-large="./img/pano3.webp">
         </div>
         <h2>Kit 10 Panos de Limpeza em Microfibra</h2>
+        <div class="preco">
+          <span class="preco-de">De: R$ 39,90</span><br>
+          <span class="preco-por">Por: R$ 18,99</span>
+        </div>
         <p>Super absorventes, reutilizáveis e ideais para casa, cozinha e escritório.</p>
         <a href="https://s.shopee.com.br/1Vos9zmuaJ" target="_blank" class="botao-afiliado">Comprar na Shopee</a>
       </article>
@@ -382,7 +454,7 @@
 
   <!-- Botão Flutuante do WhatsApp -->
   <a 
-    href="https://wa.me/5519997262839?text=Olá,%20Roberta!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos." 
+    href="https://chat.whatsapp.com/Fn2ePDpMRzy65L6sXzbEnn" 
     target="_blank" 
     class="whatsapp-float"
     aria-label="Contato via WhatsApp"
