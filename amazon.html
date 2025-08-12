@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon" />
+  <title>Achadinhos na Amazon - Roberta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fdf6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: linear-gradient(135deg, #f06292, #e91e63);
+      color: #fff;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo_achadinho {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      text-align: center;
+      flex: 1;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 4px;
+      opacity: 0.9;
+    }
+
+    /* Abas */
+    .abas {
+      display: flex;
+      justify-content: center;
+      background-color: #f06292;
+      padding: 12px 0;
+      font-weight: bold;
+    }
+
+    .abas a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .abas a:hover, .abas .ativo {
+      background-color: white;
+      color: #f06292;
+    }
+
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 10px 0;
+    }
+
+    .produto {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .produto:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .foto-principal {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .produto h2 {
+      padding: 12px;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    .produto p {
+      padding: 0 12px;
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .botao-afiliado {
+      display: block;
+      text-align: center;
+      background-color: #f06292;
+      color: white;
+      padding: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 6px;
+      margin: 0 12px 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-afiliado:hover {
+      background-color: #e91e63;
+    }
+
+    /* Botão Flutuante do WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #f06292;
+      color: #fff;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .produtos {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <img class="logo_achadinho" src="img/logo_achadinho.png" alt="Logo Achadinhos de Casa">
+    <div class="header-text">
+      <h1>🛍️ Achadinhos na Amazon</h1>
+      <p>Os melhores produtos com entrega rápida da Amazon!</p>
+    </div>
+  </header>
+
+  <!-- Abas -->
+  <div class="abas">
+    <a href="index.html">Shopee</a>
+    <a href="magalu.html">Magalu</a>
+    <a href="amazon.html" class="ativo">Amazon</a>
+  </div>
+
+  <!-- Introdução -->
+  <main>
+    <p class="intro">
+      Olá! Escolhi os melhores achados da <strong>Amazon</strong> para você: qualidade, entrega rápida e avaliações reais. 💖
+    </p>
+
+    <!-- Produtos Amazon -->
+    <section class="produtos">
+      <!-- Produto 1 -->
+      <article class="produto">
+        <img src="./img/amazon1.webp" alt="Difusor de Aromas Ultrassônico" class="foto-principal">
+        <h2>Difusor de Aromas Ultrassônico</h2>
+        <p>Com luz noturna, silencioso e ideal para decorar e relaxar. 100ml.</p>
+        <a href="https://www.amazon.com.br/SEULINKAQUI" target="_blank" class="botao-afiliado">Comprar na Amazon</a>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="produto">
+        <img src="./img/amazon2.webp" alt="Aspirador de Pó Vertical" class="foto-principal">
+        <h2>Aspirador de Pó Vertical 1500W</h2>
+        <p>Leve, sem fio, com filtro HEPA. Perfeito para limpeza rápida de pisos e estofados.</p>
+        <a href="https://www.amazon.com.br/SEULINKAQUI" target="_blank" class="botao-afiliado">Comprar na Amazon</a>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="produto">
+        <img src="./img/amazon3.webp" alt="Kit 3 Travesseiros de Espuma" class="foto-principal">
+        <h2>Kit 3 Travesseiros de Espuma Viscoelástica</h2>
+        <p>Conforto superior, anatômicos e antiácaros. Ideal para boas noites de sono.</p>
+        <a href="https://www.amazon.com.br/SEULINKAQUI" target="_blank" class="botao-afiliado">Comprar na Amazon</a>
+      </article>
+
+      <!-- Produto 4 -->
+      <article class="produto">
+        <img src="./img/amazon4.webp" alt="Panela Elétrica de Arroz" class="foto-principal">
+        <h2>Panela Elétrica de Arroz 7 Xícaras</h2>
+        <p>Com função manter aquecido, recipiente antiaderente e tampa de vidro.</p>
+        <a href="https://www.amazon.com.br/SEULINKAQUI" target="_blank" class="botao-afiliado">Comprar na Amazon</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a 
+    href="https://wa.me/5519997262839?text=Olá,%20Roberta!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos." 
+    target="_blank" 
+    class="whatsapp-float"
+    aria-label="Contato via WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Achadinhos de Casa e Utilidades. Todos os direitos reservados.</p>
+    <p>Este site utiliza links afiliados da Amazon. Ganhamos uma pequena comissão.</p>
+    <p>Contato: <a href="mailto:roberta.mnicolette@hotmail.com">roberta.mnicolette@hotmail.com</a></p>
+  </footer>
+
+</body>
+</html>
