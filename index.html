@@ -61,6 +61,29 @@
       opacity: 0.9;
     }
 
+    /* Abas */
+    .abas {
+      display: flex;
+      justify-content: center;
+      background-color: #f06292;
+      padding: 12px 0;
+      font-weight: bold;
+    }
+
+    .abas a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .abas a:hover, .abas .ativo {
+      background-color: white;
+      color: #f06292;
+    }
+
     main {
       max-width: 1400px;
       margin: 0 auto;
@@ -252,6 +275,10 @@
         font-size: 0.9rem;
       }
 
+      
+   
+
+
       /* 2 produtos por linha no celular */
       .produtos {
         grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
@@ -281,6 +308,15 @@
       <p>Produtos incríveis com os melhores preços da Shopee!</p>
     </div>
   </header>
+
+  <!-- Abas -->
+  <div class="abas">
+    <a href="index.html" class="ativo">Shopee</a>
+    <a href="magalu.html">Magalu</a>
+    <a href="amazon.html">Amazon</a>
+  </div>
+
+
 
   <!-- Introdução -->
   <main>
